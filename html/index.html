@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="containerssq">
+        <div class="box" id="box">
+            <div id="trademark" class="trademark">
+                <h1>Rayberk Development</h1>
+            </div>
+            <div id="panel" class="panel">
+                <h3>Status: <span id="txt">Disabled</span></h3>
+                <div class="img">
+                    <img src="car.png" height="auto" width="90px">
+                </div>
+                <div class="light" id="light"></div>
+                <div class="light1" id="light1"></div>
+                <button>Toggle</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function ea(str) { // Element al
+    return document.getElementById(str);
+}
+
+        var light = document.getElementById("light");
+        var light1 = document.getElementById("light1");
+        var check = document.getElementById("txt").innerHTML;
+        function red() { 
+            light1.style.borderLeftColor =  "rgba(255,0,0,0.5)";
+            light.style.borderLeftColor =  "rgba(255,0,0,0.5)";
+        }
+        function blue() {
+            light1.style.borderLeftColor =  "rgba(0,0,255,0.5)";
+            light.style.borderLeftColor =  "rgba(0,0,255,0.5)";
+        }
+        
+        
+        
+        var tim = setInterval(timer, 2000);
+        
+
+        function timer() {
+            setTimeout(function(){blue();},1000);
+            setTimeout(function(){red();},100);
+        }
+        
+        
+        
+    </script>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+
+</html>
